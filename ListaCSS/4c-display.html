@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container>*{
+            display: inline-block;
+            border: 1px solid white;
+            height: 100px;
+            width: 100px;
+        }
+        #box1{
+            position: relative;
+            top: 0px;
+            background-color: red;
+
+          
+
+        }
+        #box2{
+            background-color: green;
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            
+        }
+        #box3{
+            background-color: yellow;
+            position: absolute;
+            bottom: 20px;
+            right: 0px;
+        }
+        #box4{
+            background-color: gray;
+            position: relative;
+            left: 280px;
+            top: 350px;
+            
+        }
+        #box5{
+            background-color: purple;
+            position: absolute;
+            right: 0px;
+        }
+    </style>
+<body>
+
+    <div class="container">
+        <div id="box1" class="box">Esquerda Cima</div>
+        <div id="box2" class="box">Esquerda Baixo</div>
+        <div id="box3" class="box">Direita Baixo</div>
+        <div id="box4" class="box">Centro</div>
+        <div id="box5" class="box">Direita Cima</div>
+        
+    </div>
+</body>
+</html>
