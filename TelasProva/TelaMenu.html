@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>MENU</title>
+  <style>
+    html, body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f4f4;
+    }
+
+    .topo {
+      background-color: #003399;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .topo h1 {
+      margin: 0;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+    }
+
+    .icone {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .voltar {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .icone-voltar {
+      width: 35px;
+      height: 35px;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .menu-item {
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 30px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .menu-item:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-color: #003399;
+    }
+
+    .imgbotao {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item span {
+      display: block;
+      font-weight: bold;
+      font-size: 16px;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topo">
+    <h1><img src="https://img.icons8.com/ios-filled/100/ffffff/user-male-circle.png" class="icone"> Bem vindo!</h1>
+    <div class="voltar">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/left.png" alt="Voltar" class="icone-voltar">
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/hanger.png" alt="Produtos">
+      <span>Produtos</span>
+    </div>
+    
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/delivery.png" alt="Fornecedores">
+      <span>Fornecedores</span>
+    </div>
+    
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/planner.png" alt="Histórico de vendas">
+      <span>Histórico de vendas</span>
+    </div>
+    
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/user.png" alt="Clientes">
+      <span>Clientes</span>
+    </div>
+    
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/conference.png" alt="Funcionários">
+      <span>Funcionários</span>
+    </div>
+    
+    <div class="menu-item">
+      <img class="imgbotao" src="https://img.icons8.com/ios/100/000000/shopping-bag.png" alt="Vendas">
+      <span>Vendas</span>
+    </div>
+  </div>
+
+</body>
+</html>
