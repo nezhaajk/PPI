@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Barquinho</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #0077ff 50%, #cdefff 50%);
+      overflow: hidden;
+    }
+
+    .cenario {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+   
+    .nuvem {
+      position: absolute;
+      top: 60px;
+      left: -200px;
+      width: 100px;
+      height: 50px;
+      background: #fff;
+      border-radius: 50px;
+      box-shadow: 30px 0 #fff, 60px 10px #fff;
+      animation: moverNuvem 30s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes moverNuvem {
+      0% { left: -200px; }
+      100% { left: 110%; }
+    }
+
+
+    .barco {
+      position: absolute;
+      bottom: 110px;
+      left: -100px;
+      width: 60px;
+      height: 60px;
+      animation: moverBarco 20s linear infinite, balancar 1s ease-in-out infinite alternate;
+      z-index: 2;
+    }
+
+    .vela {
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 30px solid #1e1e1e;
+      position: absolute;
+      top: 0;
+      left: 15px;
+    }
+
+    .casco {
+      width: 60px;
+      height: 20px;
+      background-color: #1e1e1e;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    @keyframes moverBarco {
+      0% { left: -100px; }
+      100% { left: 110%; }
+    }
+
+    @keyframes balancar {
+      0% { transform: rotate(-3deg); }
+      100% { transform: rotate(3deg); }
+    }
+
+    
+    .mar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 150px;
+      background: #0055ff;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .mar::before,
+    .mar::after {
+      content: '';
+      position: absolute;
+      top: -30px;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 50% 50%, #ffffff33 20%, transparent 70%);
+      animation: onda 4s linear infinite;
+    }
+
+    .mar::after {
+      animation-delay: 2s;
+    }
+
+    @keyframes onda {
+      0% { left: 0; }
+      100% { left: -50%; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cenario">
+    <div class="nuvem"></div>
+
+    <div class="barco">
+      <div class="vela"></div>
+      <div class="casco"></div>
+    </div>
+
+    <div class="mar"></div>
+  </div>
+</body>
+</html>
