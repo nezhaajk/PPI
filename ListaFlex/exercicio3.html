@@ -1,34 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container{
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            
-            
-            
-        }
-        .box{
-            border: 1px solid gray;
-            width: 150px;
-            height: 50px;
-            
-            
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Lista de Usuários</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #bbb;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .user:last-child {
+      border-bottom: none;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .name {
+      font-weight: bold;
+    }
+
+    .address {
+      color: gray;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box" id="box1">Linda Hart</div>
-         <div class="box" id="box2">Roger Medina</div>
-        <div class="box" id="box3">Dean Sullivan</div>
-        <div class="box" id="box4">Elizabeth Austin</div>
-       </div>
-    
+  <div class="card">
+    <div class="user">
+      <img class="avatar" src="img1.png" alt="Linda Hart">
+      <div class="info">
+        <div class="name">Linda Hart</div>
+        <div class="address">6765 Shady Ln Dr</div>
+      </div>
+    </div>
+    <div class="user">
+      <img class="avatar" src="img2.png" alt="Roger Medina">
+      <div class="info">
+        <div class="name">Roger Medina</div>
+        <div class="address">2420 Paddock Way</div>
+      </div>
+    </div>
+    <div class="user">
+      <img class="avatar" src="img3.png" alt="Dean Sullivan">
+      <div class="info">
+        <div class="name">Dean Sullivan</div>
+        <div class="address">6727 Alipiana Ave</div>
+      </div>
+    </div>
+    <div class="user">
+      <img class="avatar" src="img4.png" alt="Elizabeth Austin">
+      <div class="info">
+        <div class="name">Elizabeth Austin</div>
+        <div class="address">6685 Blossom Hill Rd</div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

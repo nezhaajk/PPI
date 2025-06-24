@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 300px;
+      height: 550px; /* Altura ajustada */
+      background-color: white;
+      padding: 30px 20px;
+      border: 2px solid magenta;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 14px;
+      color: #bbb;
+      margin-bottom: 30px;
+    }
+
+    .input-placeholder {
+      width: 100%;
+      height: 16px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      background-color: #d3d3d3;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .button-placeholder {
+      width: 60px;
+      height: 16px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top">
+      <div class="logo">Company Logo</div>
+      <div class="input-placeholder"></div>
+      <div class="input-placeholder"></div>
+      <div class="input-placeholder"></div>
+      <div class="input-placeholder"></div>
+    </div>
+
+    <div class="bottom">
+      <div class="avatar"></div>
+      <div class="button-placeholder"></div>
+    </div>
+  </div>
+</body>
+</html>

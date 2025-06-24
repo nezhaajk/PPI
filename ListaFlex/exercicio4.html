@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Paisagem</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border-radius: 40px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .card.small {
+      width: 60px;
+      height: 200px;
+    }
+
+    .card.large {
+      width: 300px;
+      height: 200px;
+      border-radius: 20px;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      color: white;
+    }
+
+    .info h4 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .info p {
+      margin: 2px 0 0;
+      font-size: 12px;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="card small" style="background-image: url('paisagem1.png');">
+      <div class="icon">❄️</div>
+    </div>
+    <div class="card small" style="background-image: url('paisagem2.png');">
+      <div class="icon">🌲</div>
+    </div>
+    <div class="card large" style="background-image: url('paisagem3.png');">
+      <div class="info">
+        <h4>Oretemauw</h4>
+        <p>Omuke trughte a otufa</p>
+      </div>
+      <div class="icon">⚡</div>
+    </div>
+    <div class="card small" style="background-image: url('paisagem4.png');">
+      <div class="icon">💧</div>
+    </div>
+    <div class="card small" style="background-image: url('paisagem5.png');">
+      <div class="icon">🔥</div>
+    </div>
+  </div>
+</body>
+</html>
