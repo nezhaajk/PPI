@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos do JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #hoverDiv {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000;
+      margin-top: 10px;
+      padding: 10px;
+      text-align: center;
+      line-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <button id="alertButton">Clique aqui</button>
+  <br><br>
+  <input type="text" id="textInput" placeholder="Digite algo">
+  <br><br>
+  <div id="hoverDiv">Passe o mouse aqui</div>
+  <br><br>
+  <select id="colorSelect">
+    <option value="">Escolha uma cor</option>
+    <option value="blue">Azul</option>
+    <option value="green">Verde</option>
+    <option value="red">Vermelho</option>
+  </select>
+
+  <script>
+    // a) Clique no botão
+    const alertButton = document.getElementById('alertButton');
+    alertButton.addEventListener('click', () => {
+      alert('Você clicou no botão!');
+    });
+
+    // b) Teclas pressionadas no input
+    const textInput = document.getElementById('textInput');
+    textInput.addEventListener('keydown', (event) => {
+      console.log(`Tecla pressionada: ${event.key}`);
+    });
+
+    // c) Foco no input
+    textInput.addEventListener('focus', () => {
+      textInput.style.backgroundColor = 'yellow';
+    });
+
+    // d) Perda de foco
+    textInput.addEventListener('blur', () => {
+      textInput.style.backgroundColor = '';
+    });
+
+    // e) Mouse sobre a div
+    const hoverDiv = document.getElementById('hoverDiv');
+    hoverDiv.addEventListener('mouseover', () => {
+      hoverDiv.style.backgroundColor = '#f0f0f0';
+    });
+
+    // f) Mouse sai da div
+    hoverDiv.addEventListener('mouseout', () => {
+      hoverDiv.style.backgroundColor = '';
+    });
+
+    // g) Mudança de cor do background da página
+    const colorSelect = document.getElementById('colorSelect');
+    colorSelect.addEventListener('change', () => {
+      document.body.style.backgroundColor = colorSelect.value;
+    });
+  </script>
+</body>
+</html>

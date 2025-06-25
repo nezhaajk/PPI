@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Sorteio de Números</h1>
+
+  <label for="min">Mínimo:</label>
+  <input type="number" id="min" value="1">
+  <label for="max">Máximo:</label>
+  <input type="number" id="max" value="100">
+  <button onclick="sortear()">Sortear</button>
+
+  <p id="resultado"></p>
+  <ul id="historico"></ul>
+
+  <script>
+    const historicoNumeros = [];
+
+    function sortear() {
+      const min = parseInt(document.getElementById('min').value);
+      const max = parseInt(document.getElementById('max').value);
+      const resultado = document.getElementById('resultado');
+      const ul = document.getElementById('historico');
+
+      if (isNaN(min) || isNaN(max) || min > max) {
+        resultado.textContent = "Intervalo inválido.";
+        return;
+      }
+
+      const numeroSorteado = Math.floor(Math.random() * (max - min + 1)) + min;
+      resultado.textContent = `Número sorteado: ${numeroSorteado}`;
+
+      let encontrado = historicoNumeros.find(obj => obj.numero === numeroSorteado);
+      if (encontrado) {
+        encontrado.contador++;
+      } else {
+        historicoNumeros.push({ numero: numeroSorteado, contador: 1 });
+      }
+
+      ul.innerHTML = "";
+      historicoNumeros.forEach(obj => {
+        const li = document.createElement("li");
+        li.textContent = `${obj.numero} (sorteado ${obj.contador}x)`;
+        ul.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>

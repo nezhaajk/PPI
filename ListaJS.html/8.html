@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Alteração de Cores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background-color 0.5s, color 0.5s;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .container {
+      padding: 20px;
+      border-radius: 8px;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pressione a tecla de espaço para mudar as cores</h1>
+    <p>Divirta-se explorando a paleta!</p>
+  </div>
+
+  <script>
+    const colors = ["#05668D", "#427AA1", "#EBF2FA", "#679436", "#A5BE00"];
+
+    function getRandomColor() {
+      return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    document.addEventListener("keydown", function(event) {
+      if (event.code === "Space") {
+        const bgColor = getRandomColor();
+        const textColor = getRandomColor();
+        document.body.style.backgroundColor = bgColor;
+        document.body.style.color = textColor;
+      }
+    });
+  </script>
+</body>
+</html>
