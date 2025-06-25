@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tipos de Variáveis e Operadores</title>
+  <script>
+    function executar() {
+      // Declarando variáveis
+      let texto = "Olá mundo";
+      let numero = 42;
+      let booleano = true;
+      let indefinido;
+      let nulo = null;
+      let objeto = { nome: "Gabriel", idade: 25 };
+      let lista = [1, 2, 3];
+
+      // Exibindo tipos com typeof
+      document.getElementById("pstring").innerText = `Tipo de texto: ${typeof texto}`;
+      document.getElementById("pnumero").innerText = `Tipo de número: ${typeof numero}`;
+      document.getElementById("pbooleano").innerText = `Tipo de booleano: ${typeof booleano}`;
+      document.getElementById("pindefinido").innerText = `Tipo de indefinido: ${typeof indefinido}`;
+      document.getElementById("pnulo").innerText = `Tipo de nulo: ${typeof nulo} (atenção: typeof null retorna 'object' por um bug antigo do JS)`;
+      document.getElementById("pobjeto").innerText = `Tipo de objeto: ${typeof objeto}`;
+      document.getElementById("parray").innerText = `Tipo de array: ${typeof lista} (arrays são objetos especiais)`;
+
+      // Operações e explicações
+      let r1 = texto + numero;       // concatenação
+      let r2 = booleano * numero;    // true vira 1
+      let r3 = texto * booleano;     // NaN
+
+      console.log("texto + numero:", r1);
+      console.log("booleano * numero:", r2);
+      console.log("texto * booleano:", r3);
+
+      document.getElementById("resultado1").innerText = `"texto + numero" resulta em "${r1}" (concatenação)`;
+      document.getElementById("resultado2").innerText = `"booleano * numero" resulta em "${r2}" (true é tratado como 1)`;
+      document.getElementById("resultado3").innerText = `"texto * booleano" resulta em "${r3}" (texto não pode ser multiplicado)`;
+    }
+  </script>
+</head>
+<body>
+  <h1>Tipos de Variáveis e Operadores</h1>
+
+  <button onclick="executar()">Executar Script</button>
+
+  <p id="pstring"></p>
+  <p id="pnumero"></p>
+  <p id="pbooleano"></p>
+  <p id="pindefinido"></p>
+  <p id="pnulo"></p>
+  <p id="pobjeto"></p>
+  <p id="parray"></p>
+
+  <hr>
+
+  <p id="resultado1"></p>
+  <p id="resultado2"></p>
+  <p id="resultado3"></p>
+</body>
+</html>

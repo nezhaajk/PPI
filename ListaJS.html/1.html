@@ -1,24 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O que é JavaScript?</title>
+  <meta charset="UTF-8">
+  <title>O que é JavaScript?</title>
+  <script>
+    alert("Olá! Bem-vindo ao mundo do JavaScript 😄");
+    console.log("Página carregada com sucesso. JavaScript está funcionando!");
+    
+    // Função para mostrar a hora atual
+    function mostrarHora() {
+      const agora = new Date();
+      document.getElementById("hora").innerHTML = "Hora atual: " + agora.toLocaleTimeString();
+    }
+  </script>
 </head>
-<body>
-    <h1>O que é JavaScript?</h1>
-    <p>A motivaçâo para a criação do JavaScript foi a necessidade de fazer com que
-        as paginas da internet fossem mais dinamicas e interativas.
-        A execuçâo do JavaScript no navegador é pelo cliente, no servidor é usado em um ambiente 
-        de execução especifico,para lidar com a logica do aplicativo e interagir
-        com bancos de dados e sistema de arquivo.
-        Sandbox  é um ambiente de teste isolado,seguro e controlado onde podem ser executados
-        e analisados programas, sem correr o risco de prejudicar o sistema principal ou a rede.
-        Objetos globais como document, console e alert são objetos pré-escritos que estão sempre
-        disponiveis em qualquer parte do codigo. Document: é o documento html da pagina atual 
-        no navegador. atraves dele, é possivel acessar e manipular elementos da pagina, como adicionar ou 
-        remover conteudo.
-        Console permite que você envie mensagens para o console do navegador. Alert é uma forma de interagir
-        com o usuario, apresenta uma caixa de dialogo na pagina para mostrar uma mensagem pro usuario.</p>
+<body onload="mostrarHora()">
+  <h1 id="titulo-principal">O que é JavaScript?</h1>
+
+  <p id="explicacao">
+    JavaScript foi criado para tornar as páginas web interativas. Ele surgiu em 1995 por Brendan Eich, com o objetivo de permitir que os navegadores tivessem comportamentos dinâmicos além do que HTML e CSS permitiam.
+  </p>
+
+  <p id="execucao">
+    Ele pode ser executado no **navegador**, diretamente pelo usuário (frontend), e também no **servidor** com ferramentas como Node.js (backend). Cada ambiente oferece diferentes objetos e possibilidades.
+  </p>
+
+  <p id="sandbox">
+    No navegador, o JavaScript é executado em um ambiente controlado chamado de *sandbox*. Isso protege o sistema do usuário de comandos perigosos que possam comprometer a segurança.
+  </p>
+
+  <p id="globais">
+    O JavaScript oferece objetos globais muito úteis como:
+    <ul>
+      <li><strong>document</strong>: para manipular o conteúdo HTML.</li>
+      <li><strong>console</strong>: para mensagens de depuração no console.</li>
+      <li><strong>alert</strong>: para mostrar pop-ups com mensagens.</li>
+    </ul>
+  </p>
+
+  <p id="hora"></p>
 </body>
 </html>
