@@ -33,7 +33,10 @@ switch ($rota){
         header("Location:rota.php");
         break;
     case 'cadastrar_usuario':
-        header("Location:cadastrar_usuario.php");
+        if(isset($_SESSION['usr'])){
+            header("Location:home.php");
+        }
+        //header("Location:cadastrar_usuario.php");
         break;
 
     default:
