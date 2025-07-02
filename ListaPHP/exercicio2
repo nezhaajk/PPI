@@ -1,0 +1,3 @@
+O php roda no servidor, ja o JS roda no navegador.
+PHP gera o conteúdo da página antes dela chegar ao navegador.
+JS atua depois, no que já foi carregado.
